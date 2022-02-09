@@ -1,0 +1,2 @@
+django==4.0.2
+channels==3.0.4
