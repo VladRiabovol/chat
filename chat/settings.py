@@ -39,6 +39,8 @@ INSTALLED_APPS = [
 
     'channels',
 
+    'personal',
+
 
 ]
 
@@ -72,7 +74,7 @@ TEMPLATES = [
 ]
 
 #WSGI_APPLICATION = 'chat.wsgi.application'
-ASGI_APPLICATION = "chat.routing.application"
+ASGI_APPLICATION =  'chat.asgi.application' #"chat.routing.application"
 
 
 DATABASES = {
@@ -131,5 +133,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'media'),
+
+]
+
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
+
+TEMP = os.path.join(BASE_DIR, 'media_cdn/temp')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
