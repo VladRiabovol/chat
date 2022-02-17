@@ -70,6 +70,7 @@ TEMPLATES = [
 #WSGI_APPLICATION = 'chat.wsgi.application'
 ASGI_APPLICATION =  'chat.asgi.application' #"chat.routing.application"
 
+
 DATABASES = {
     "default": {
         "ENGINE": env("SQL_ENGINE"),
@@ -78,7 +79,7 @@ DATABASES = {
         "PASSWORD": env("SQL_PASSWORD"),
         "HOST": env("SQL_HOST"),
         "PORT": env("SQL_PORT"),
-    }
+    },
 }
 
 CHANNEL_LAYERS = {
