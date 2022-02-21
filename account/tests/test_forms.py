@@ -1,6 +1,6 @@
 from django.test import TestCase
 from account.models import Account
-from account.forms import RegistrationForm
+from account.forms import RegistrationForm, AccountAuthenticationForm
 
 
 class SignInFormTest(TestCase):
@@ -37,3 +37,10 @@ class SignInFormTest(TestCase):
         self.assertEqual(form.errors['email'][0], 'Email admin@admin.com is already in use')
         self.assertEqual(form.errors['username'][0], 'Username admin is already in use')
 
+    def test_authentication_form(self):
+        credentials = {
+            'email': 'admin@admin.com',
+            'password': 'admin',
+        }
+        form = AccountAuthenticationForm(data=credentials)
+        self.assertTrue(form.is_valid())
