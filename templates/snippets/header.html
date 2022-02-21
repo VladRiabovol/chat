@@ -55,13 +55,13 @@
                                      src="{{request.user.profile_image.url}}" alt="default_logo" width="40" height="40">
                                 <div class="dropdown-menu" aria-labelledby="id_profile_links">
                                     <a class="dropdown-item" href="#">Account</a>
-                                    <a class="dropdown-item" href="#">Logout</a>
+                                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 {% else %}
-                    <a href="#" class="p-1 text-dark">Login</a>
+                    <a href="{% url 'login' %}" class="p-1 text-dark">Login</a>
                     <a href="{% url 'register' %}" class="btn btn-outline-primary text-dark p-1">Register</a>
                 {% endif %}
             </nav>
@@ -119,13 +119,13 @@
                                      src="{{request.user.profile_image.url}}" alt="default_logo" width="40" height="40">
                                 <div class="dropdown-menu" aria-labelledby="id_profile_links">
                                     <a class="dropdown-item" href="#">Account</a>
-                                    <a class="dropdown-item" href="#">Logout</a>
+                                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 {% else %}
-                    <a href="#" class="p-1 text-dark">Login</a>
+                    <a href="{% url 'login' %}" class="p-1 text-dark">Login</a>
                     <a href="{% url 'register' %}" class="btn btn-outline-primary text-dark p-1">Register</a>
                 {% endif %}
             </nav>
