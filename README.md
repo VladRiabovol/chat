@@ -5,6 +5,7 @@
 ### User management:
 - Registration
 - Login
+- Login with google and facebook
 - Logout
 - Forgot Password
 - Change Password
